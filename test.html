@@ -23,11 +23,9 @@
         window.addEventListener('load', () => {
             var el = document.getElementById('liveGraph');
             var graph = new LiveGraph(el, {
-                width: 200,
-                height: 60,
-                yRange: [0, 100]
+                maxY: 50,
+                label: 'FPS'
             });
-            graph.clear();
 
             var x = 0;
             var y = 0;

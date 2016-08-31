@@ -1,8 +1,17 @@
 .livegraph-container {
-    width: 100%;
-    height: 100%;
+	background-color: #BCBCBC;
+	padding: 10px;
 }
 
-.livegraph-container canvas {
-    border: 1px solid red;
+.livegraph-canvas-container canvas {
+}
+
+.livegraph-container label {
+	display: block;
+	text-align: center;
+	font-family: arial;
+	font-size: 10pt;
+	margin-top: 5px;
+	opacity: 0.8;
+	font-style: italic;
 }
