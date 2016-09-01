@@ -14,8 +14,7 @@ Insert into `<head>`:
  window.addEventListener('load', () => {
             var el = document.getElementById('liveGraph');
             var graph = new LiveGraph(el, {
-                maxY: 50,
-                label: 'FPS'
+                maxY: 50
             });
 
             var x = 0,
@@ -40,7 +39,7 @@ Insert into `<head>`:
                 width: 550,
                 height: 400,
                 label: 'Distance',
-                unit: 'metres',
+                units: 'metres',
                 theme: {
                   fg: '#07FAFF',        
                   bg: '#232323'
@@ -55,7 +54,7 @@ Insert into `<head>`:
                 requestAnimationFrame(plot);
                 graph.timePlot(y);
                 x += 1;
-                y = 5 * x;
+                y = 50 * Math.abs(Math.sin(x / 50));
             };
 });
 ```
