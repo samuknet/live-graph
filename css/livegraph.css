@@ -1,6 +1,7 @@
 .livegraph-container {
 	background-color: #BCBCBC;
 	padding: 10px;
+	box-sizing: initial;
 }
 
 .livegraph-canvas-container canvas {
