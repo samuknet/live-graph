@@ -61,7 +61,7 @@ window.LiveGraph = window.LiveGraph || (function() {
 
         this.canvas = canvas;
         this.ctx = ctx;
-        this.yRange = [0, options.maxY];
+        this.yRange = [options.minY || 0, options.maxY];
         this.prevPoint = [0, canvas.height];
 
         this.translate = function(tx, ty) {
@@ -104,7 +104,7 @@ window.LiveGraph = window.LiveGraph || (function() {
         let [prevX, prevY] = this.prevPoint;
 
         let canvasX = prevX + 1;
-        let canvasY = (cv.height - ((y / this.yRange[1]) * cv.height)).toFixed(2);
+        let canvasY = (cv.height - (((y  - this.yRange[0])/ (this.yRange[1] - this.yRange[0])) * cv.height)).toFixed(2);
 
         if (canvasX > cv.width) {
             this.translate(-1, 0);
