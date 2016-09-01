@@ -92,7 +92,7 @@ window.LiveGraph = window.LiveGraph || (function() {
         }
 
         this.updateLabel = function(val) {
-            label.textContent = labelText + ': ' + val + labelUnit;
+            label.textContent = labelText + ': ' + val + ' ' + labelUnit;
         }
         this.updateLabel('-');
     }
